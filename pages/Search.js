@@ -1,6 +1,6 @@
-import { useState } from "react/cjs/react.development";
-import { useRouter } from "next/dist/client/router";
-import Image from "next/dist/client/image";
+import { useState } from "react"
+import { useRouter } from "next/router";
+import Image from "next/image";
 import { Flex, Box, Text, Icon } from "@chakra-ui/react";
 import {BsFilter} from "react-icons/bs";
 import SearchFilters from "../componets/SearchFilters";
@@ -40,6 +40,7 @@ import { fetchApi, baseUrl } from "../utils/fetchApi";
    }
 
 
+   export default Search; 
    
 export async function getServerSideProps({query}){
     const purpose = query.purpose || 'for-rent';
@@ -62,4 +63,4 @@ export async function getServerSideProps({query}){
   };
 }
 
-export default Search;
+
